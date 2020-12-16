@@ -1,0 +1,129 @@
+@import "config";
+
+// GENERAL DOCUMENT STYLES
+
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: $textcolor;
+}
+a:hover,
+a:focus,
+a.active {
+  color: $accent;
+}
+
+::placeholder {
+  color: #666;
+}
+
+::selection {
+  color: #fff;
+
+  background-color: $accent;
+}
+
+button {
+  padding: 0;
+  border: none;
+
+  font: inherit;
+
+  background-color: transparent;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  outline: none;
+  &:focus:required:invalid {
+    border-color: red;
+  }
+  &:required:valid {
+    border-color: green;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+
+  clip: rect(0 0 0 0);
+}
+
+.container {
+  position: relative;
+
+  width: 100%;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+
+  color: $textcolor;
+  font-size: $fontsize;
+  font-family: $roboto;
+  line-height: 1.65;
+}
+
+// CUSTOM USER STYLES & IMPORTS
+
+
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+
+@include responsive-images("footer", "brusnik-ru.jpg");

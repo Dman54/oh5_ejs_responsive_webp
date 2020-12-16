@@ -2,9 +2,5 @@
 *.zip
 *.git
 *.log
-less
-sass
-scss
-styl
 ht.access
 .htaccess
