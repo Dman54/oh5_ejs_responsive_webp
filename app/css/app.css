@@ -1,0 +1,207 @@
+html {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+*,
+::after,
+::before {
+  -webkit-box-sizing: inherit;
+     -moz-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: #333;
+}
+
+a:hover,
+a:focus,
+a.active {
+  color: orange;
+}
+
+::-webkit-input-placeholder {
+  color: #666;
+}
+
+:-moz-placeholder {
+  color: #666;
+}
+
+::-moz-placeholder {
+  color: #666;
+}
+
+:-ms-input-placeholder {
+  color: #666;
+}
+
+::-ms-input-placeholder {
+  color: #666;
+}
+
+::placeholder {
+  color: #666;
+}
+
+::-moz-selection {
+  color: #fff;
+  background-color: orange;
+}
+
+::selection {
+  color: #fff;
+  background-color: orange;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+input:focus:required:invalid,
+textarea:focus:required:invalid {
+  border-color: red;
+}
+
+input:required:valid,
+textarea:required:valid {
+  border-color: green;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  color: #333;
+  font-size: 16px;
+  font-family: Roboto, "Roboto", "PT Sans", "Helvetica", sans-serif;
+  line-height: 1.65;
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+
+.webp footer {
+  background-image: url("../images/dest/brusnik-ru.webp");
+}
+
+.no-webp footer {
+  background-image: url("../images/dest/brusnik-ru.jpg");
+}
+
+@media (max-width: 1200px) {
+  .webp footer {
+    background-image: url("../images/dest/brusnik-ru-1200px.webp");
+  }
+  .no-webp footer {
+    background-image: url("../images/dest/brusnik-ru-1200px.jpg");
+  }
+}
+
+@media (max-width: 992px) {
+  .webp footer {
+    background-image: url("../images/dest/brusnik-ru-992px.webp");
+  }
+  .no-webp footer {
+    background-image: url("../images/dest/brusnik-ru-992px.jpg");
+  }
+}
+
+@media (max-width: 768px) {
+  .webp footer {
+    background-image: url("../images/dest/brusnik-ru-768px.webp");
+  }
+  .no-webp footer {
+    background-image: url("../images/dest/brusnik-ru-768px.jpg");
+  }
+}
+
+@media (max-width: 576px) {
+  .webp footer {
+    background-image: url("../images/dest/brusnik-ru-576px.webp");
+  }
+  .no-webp footer {
+    background-image: url("../images/dest/brusnik-ru-576px.jpg");
+  }
+}
+
+@media (max-width: 414px) {
+  .webp footer {
+    background-image: url("../images/dest/brusnik-ru-414px.webp");
+  }
+  .no-webp footer {
+    background-image: url("../images/dest/brusnik-ru-414px.jpg");
+  }
+}

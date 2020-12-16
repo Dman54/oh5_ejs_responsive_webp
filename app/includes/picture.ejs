@@ -1,0 +1,24 @@
+<% sizes = [1200, 992, 768, 576, 414] -%>
+<% ext = src.substr(src.lastIndexOf('.') + 1); -%>
+<% src0 = src.replace("."+ext, ""); -%>
+<picture>
+  <% if (maxWidth > sizes[0]) { %>
+  <source type="image/webp" srcset="<%= src0 %>.webp" media="(min-width:<%= sizes[0] %>px)" />
+  <% }; -%>
+  <% for(var i=0; i<sizes.length; i++) { %>
+    <% if (maxWidth > sizes[i]) { %>
+    <source type="image/webp" srcset="<%= src0+"-"+sizes[i]+"px" %>.webp" <% if (i<sizes.length-1) { -%>
+      media="(min-width:<%= sizes[i+1] %>px)" <% }; -%> />
+    <% }; -%>
+  <% }; -%>
+  <% if (maxWidth > sizes[0]) { %>
+  <source srcset="<%= src0 %>.<%= ext %>" media="(min-width:<%= sizes[0] %>px)" />
+  <% }; -%>
+  <% for(var i=0; i<sizes.length; i++) { %>
+    <% if (maxWidth > sizes[i]) { %>
+    <source srcset="<%= src0+"-"+sizes[i]+"px" %>.<%= ext %>" <% if (i<sizes.length-1) { -%>
+      media="(min-width:<%= sizes[i+1] %>px)" <% }; -%> />
+    <% }; -%>
+  <% }; -%>
+  <img src=<%= src %> alt="<%= alt %>" />
+</picture>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <%- include('includes/head', {title:"Текст", description:"разработка сайта под ключ любой сложности"}); %>
+</head>
+
+<body>
+  <main>
+    <%- include('includes/picture.ejs', {src:"images/dest/zaomasterru.jpg", alt:"СуперКартинка", maxWidth:800}); %>
+      <strong>main content</strong>
+      <ul>
+        <% cars.forEach( (car)=> { -%>
+          <li>
+            <%= car %>
+          </li>
+          <% }); -%>
+      </ul>
+  </main>
+  <%- include('includes/footer') %>
+</body>
+
+</html>
